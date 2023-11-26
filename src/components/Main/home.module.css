@@ -8,12 +8,10 @@
 
     top: 0;
     left: 0;
-    /* z-index: -1; */
 }
 
 .fill {
     width: 40%;
-    /* padding-top: 5rem; */
 }
 
 .about {
@@ -54,3 +52,17 @@
     fill: aquamarine;
     cursor: pointer;
 }
+
+@media (max-width: 900px) {
+    .fill {
+        display: none;
+    }
+
+    .about {
+        width: 60%;
+        position: absolute;
+        bottom: 3rem;
+        margin: 0;
+    }
+}
+/* 192.168.1.7:5173 */
