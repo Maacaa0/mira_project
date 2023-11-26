@@ -1,0 +1,4 @@
+.pricelist {
+    min-height: 100vh;
+    padding: 5rem var(--page-padding);
+}

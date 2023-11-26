@@ -1,0 +1,56 @@
+.home {
+    display: flex;
+    height: 100vh;
+
+    background: url("images/portrait.jpeg") -20vw no-repeat;
+    position: relative;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    /* z-index: -1; */
+}
+
+.fill {
+    width: 40%;
+    /* padding-top: 5rem; */
+}
+
+.about {
+    width: 50%;
+    margin: 5rem 2rem;
+    padding: 2rem;
+    height: fit-content;
+    background: rgb(0 0 0 / 50%);
+}
+
+.name {
+    margin-bottom: 1rem;
+}
+
+.socials {
+    position: absolute;
+    bottom: 2rem;
+    right: 5rem;
+    font-size: 4rem;
+    display: flex;
+    gap: 1rem;
+    fill: white;
+}
+
+@media (max-height: 400px) {
+    .socials {
+        display: none;
+    }
+  }
+
+.icon:hover {
+    transition: 200ms ease-in-out;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -ms-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
+    cursor: pointer;
+    fill: aquamarine;
+    cursor: pointer;
+}

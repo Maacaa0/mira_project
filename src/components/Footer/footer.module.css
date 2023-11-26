@@ -1,0 +1,5 @@
+.footer {
+    min-height: 15rem;
+    background: black;
+    padding: 5rem var(--page-padding);
+}
