@@ -2,7 +2,7 @@
     display: flex;
     height: 100vh;
 
-    background: url("images/portrait.jpeg") -20vw no-repeat;
+    background: url("/images/portrait.jpeg") -20vw no-repeat;
     position: relative;
     width: 100%;
 
