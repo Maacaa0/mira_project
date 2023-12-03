@@ -1,6 +1,6 @@
 .home {
   display: flex;
-  height: 100vh;
+  min-height: 100dvh;
 
   background: url("/images/portrait.jpeg") -20vw no-repeat;
   position: relative;
