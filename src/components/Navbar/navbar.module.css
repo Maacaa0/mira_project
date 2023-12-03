@@ -1,70 +1,132 @@
 .nav {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 3rem;
-    padding: 0 var(--page-padding);
-    background: rgba(0, 0, 0, .5);
-    z-index: 10;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 3rem;
+  padding: 0 var(--page-padding);
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
 .logo {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.hamburger {
+  all: unset;
+  display: none;
+  fill: white;
+  font-size: 1.5rem;
+  position: relative;
+  top: 3px;
 }
 
 .linksWrapper {
-    display: flex;
+  display: flex;
 }
 
 .links {
-    display: flex;
-    gap: 1.5rem;
-    font-size: 1.2rem;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.galleryBtn {
-    background: none;
-    color: inherit;
-    font-size: inherit;
-    cursor: pointer;
+/* .galleryBtn {
+  background: none;
+  color: inherit;
+  font-size: inherit;
+  cursor: pointer;
 
-    display: flex;
-    align-items: baseline;
-    gap: 0.4rem;
-}
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+} */
 
-.galleryBtn > svg {
-    fill: white;
-    font-size: .8rem;
-}
+/* .galleryBtn > svg {
+  fill: white;
+  font-size: 0.8rem;
+} */
 
-.galleryOptions {
-    position: absolute;
-    top: 3rem;
-    background: rgba(0, 0, 0, .5);
-    padding: 0.7rem;
+/* .galleryOptions {
+  position: absolute;
+  top: 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.7rem;
 }
 
 .galleryOption {
-    margin-bottom: .8rem;
-    cursor: pointer;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
 }
 
 .galleryOption:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+} */
+
+/* .overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+} */
+
+.closeBtn_shown {
+    font-weight: 900;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 1.1rem;
+    fill: white;
 }
 
-.overlay {
-    width: 100%;
-    height: 100%;
+.closeBtn_hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .linksWrapper_shown {
     position: fixed;
-    left: 0;
+    width: 100%;
+    height: 100vh;
     top: 0;
-    z-index: -1;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.946);
+    pointer-events: all;
+    transition: opacity 150ms ease-in-out;
+    -webkit-transition: opacity 150ms ease-in-out;
+    -moz-transition: opacity 150ms ease-in-out;
+    -ms-transition: opacity 150ms ease-in-out;
+    -o-transition: opacity 150ms ease-in-out;
+}
+
+  .linksWrapper_hidden {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  /* .galleryOptions {
+    top: 18rem;
+    background: rgb(0 0 0);
+  } */
 }

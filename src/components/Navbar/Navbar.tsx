@@ -1,58 +1,83 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./navbar.module.css";
-import { chevronDown, chevronUp } from "../../assets/icons";
+import { hamburgerClose, hamburgerOpen } from "../../assets/icons";
 
 // type Navbar = {
-//   setIsNavExpanded: () => void
+//   setgalleryExpanded: () => void
 // }
 
 export default function Navbar() {
-  const [isNavExpanded, setIsNavExpanded] = useState(false);
-
-  
+  // const [galleryExpanded, setgalleryExpanded] = useState(false);
+  const [navExpanded, setNavExpanded] = useState(false);
 
   return (
     <nav className={styles.nav}>
       <a className={styles.logo} href="/">
         MK
       </a>
-
-      <div className={styles.linksWrapper}>
+      <button
+        onClick={() => setNavExpanded(!navExpanded)}
+        className={styles.hamburger}
+      >
+        {hamburgerOpen}
+      </button>
+      <div
+        className={
+          navExpanded ? styles.linksWrapper_shown : styles.linksWrapper_hidden
+        }
+      >
         <ul className={styles.links}>
+          <button
+            className={
+              navExpanded ? styles.closeBtn_shown : styles.closeBtn_hidden
+            }
+            onClick={() => setNavExpanded(false)}
+          >
+            {hamburgerClose}
+          </button>
           <li className={styles.link}>
-            <Link to="/">O mně</Link>
+            <Link onClick={() => setNavExpanded(false)} to="/">O mně</Link>
           </li>
           <li className={styles.link}>
-            <Link to="/cenik">Ceník</Link>
+            <Link onClick={() => setNavExpanded(false)} to="/galerie">Galerie</Link>
           </li>
           <li className={styles.link}>
-            <button
-              className={styles.galleryBtn}
-              onClick={() => setIsNavExpanded(!isNavExpanded)}
-            >
-              Galerie {isNavExpanded ? chevronUp : chevronDown}
-            </button>
-            {isNavExpanded && (
-              <>
-              <ul className={styles.galleryOptions}>
-                <li className={styles.galleryOption}>
-                  <Link to={"/"}>Text odkazu 1</Link>
-                </li>
-                <li className={styles.galleryOption}>
-                  <Link to={"/"}>Text odkazu 2</Link>
-                </li>
-                <li className={styles.galleryOption}>
-                  <Link to={"/"}>Text odkazu 3</Link>
-                </li>
-              </ul>
-              <div onClick={()=>setIsNavExpanded(false)} className={styles.overlay}></div>
-              </>
-            )}
+            <Link onClick={() => setNavExpanded(false)} to="/cenik">Ceník</Link>
           </li>
-          <li className={styles.link}><a href="#footer">Kontakt</a></li>
+          <li className={styles.link}>
+            <a onClick={() => setNavExpanded(false)} href="#footer">Kontakt</a>
+          </li>
         </ul>
       </div>
     </nav>
   );
+}
+
+{
+  /* <button
+              className={styles.galleryBtn}
+              onClick={() => setgalleryExpanded(!galleryExpanded)}
+            >
+              Galerie {galleryExpanded ? chevronUp : chevronDown}
+            </button>
+            {galleryExpanded && (
+              <>
+                <ul className={styles.galleryOptions}>
+                  <li className={styles.galleryOption}>
+                    <Link to={"/"}>Text odkazu 1</Link>
+                  </li>
+                  <li className={styles.galleryOption}>
+                    <Link to={"/"}>Text odkazu 2</Link>
+                  </li>
+                  <li className={styles.galleryOption}>
+                    <Link to={"/"}>Text odkazu 3</Link>
+                  </li>
+                </ul>
+                <div
+                  onClick={() => setgalleryExpanded(false)}
+                  className={styles.overlay}
+                ></div>
+              </>
+            )} */
 }

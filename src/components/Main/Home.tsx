@@ -7,7 +7,7 @@ const Home = () => {
         <div className={styles.fill}></div>
         <article className={styles.about}>
           <h1 className={styles.name}>Miroslav Kravec</h1>
-          <p>
+          <p className={styles.text}>
             Jsem rodilý Turnovák a stále tu žiji. K fotografii mě přivedl můj
             táta. Jako kluk jsem mu asistoval při vyvolávání fotografií z
             kinofilmu v provizorní temné komoře na půdě našeho domu. Práce s
