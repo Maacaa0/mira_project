@@ -16,10 +16,11 @@
 
 .about {
   width: 50%;
+  height: fit-content;
   margin: 5rem 2rem;
   padding: 2rem;
-  height: fit-content;
   background: rgb(0 0 0 / 50%);
+  color: var(--text-clr);
 }
 
 .name {
@@ -36,10 +37,8 @@
   fill: white;
 }
 
-@media (max-height: 400px) {
-  .socials {
-    display: none;
-  }
+.icon {
+  fill: var(--text-clr);
 }
 
 .icon:hover {
@@ -49,9 +48,17 @@
   -ms-transition: 200ms ease-in-out;
   -o-transition: 200ms ease-in-out;
   cursor: pointer;
-  fill: aquamarine;
+  fill: #cd3e3e;
   cursor: pointer;
 }
+
+@media (max-height: 400px) {
+  .socials {
+    display: none;
+  }
+}
+
+
 
 @media (max-width: 900px) {
   .fill {

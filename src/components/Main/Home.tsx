@@ -3,7 +3,7 @@ import styles from "./home.module.css";
 const Home = () => {
   return (
     <>
-      <div className={styles.home}>
+      <main className={styles.home}>
         <div className={styles.fill}></div>
         <article className={styles.about}>
           <h1 className={styles.name}>Miroslav Kravec</h1>
@@ -22,7 +22,9 @@ const Home = () => {
           </a>
           <a className={styles.icon} href="#">{instagramIcon}</a>
         </div>
-      </div>
+      </main>
+      <section className="info"></section>
+      <section className="reviews"></section>
     </>
   );
 };

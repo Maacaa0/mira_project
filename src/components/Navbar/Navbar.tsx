@@ -40,7 +40,7 @@ export default function Navbar() {
             <Link onClick={() => setNavExpanded(false)} to="/">O mně</Link>
           </li>
           <li className={styles.link}>
-            <Link onClick={() => setNavExpanded(false)} to="/galerie">Galerie</Link>
+            <Link onClick={() => setNavExpanded(false)} to="/portfolio">Portfolio</Link>
           </li>
           <li className={styles.link}>
             <Link onClick={() => setNavExpanded(false)} to="/cenik">Ceník</Link>
