@@ -20,10 +20,28 @@ const Home = () => {
           <a className={styles.icon} href="#">
             {facebookIcon}
           </a>
-          <a className={styles.icon} href="#">{instagramIcon}</a>
+          <a className={styles.icon} href="#">
+            {instagramIcon}
+          </a>
         </div>
       </main>
-      <section className="info"></section>
+      <section className={styles.info}>
+        <div className={styles.bgSpace}></div>
+        <article className={styles.detail}>
+          <div className={styles.detailImgWrapper}>
+          <img
+            className={styles.detailImg}
+            src="./images/portrait1.jpg"
+            alt="Fotka autora"
+          />
+
+          </div>
+          <p className={styles.detailText}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quos modi error est incidunt itaque, eaque dolore pariatur consectetur obcaecati laboriosam omnis dolores libero nihil cumque optio ut nulla molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. In laudantium minus iusto omnis, voluptatum recusandae consequuntur error debitis facilis, asperiores, architecto qui quam autem quod tenetur ipsam doloremque aperiam voluptatibus!<br /><br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et fugit cumque eos blanditiis, omnis recusandae eveniet, dolor placeat iure dolores pariatur, corrupti debitis libero vitae quia aperiam architecto autem possimus.
+          </p>
+        </article>
+      </section>
       <section className="reviews"></section>
     </>
   );

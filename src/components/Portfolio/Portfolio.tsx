@@ -5,7 +5,11 @@ import galleryItems from "./GalleryPaths";
 const Portfolio = () => {
   const galleries = galleryItems.map((gallery) => {
     return (
-      <Link className={styles.gallery} to={`/portfolio/${gallery.id}`} key={gallery.id}>
+      <Link
+        className={styles.gallery}
+        to={`/portfolio/${gallery.id}`}
+        key={gallery.id}
+      >
         <div className={styles.galleryText}>{gallery.text}</div>
         <img
           className={styles.galleryImg}
@@ -20,7 +24,10 @@ const Portfolio = () => {
 
   return (
     <section className={styles.main}>
-      <h3 className={styles.heading}>Podívejte se na příklad mé tvorby.</h3>
+      <article className={styles.heading}>
+        <h3>Podívejte se na mou tvorbu.</h3>
+        <p>Vyberte si galerii.</p>
+      </article>
       <div className={styles.galleries}>{galleries}</div>
     </section>
   );
