@@ -11,7 +11,7 @@
 
 .galleries {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 25%));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 25%));
   grid-gap: 1rem;
   justify-content: center;
   margin-top: 3rem;
