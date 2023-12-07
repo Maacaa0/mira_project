@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./navbar.module.css";
 import { hamburgerClose, hamburgerOpen } from "../../assets/icons";
 
@@ -37,16 +37,40 @@ export default function Navbar() {
             {hamburgerClose}
           </button>
           <li className={styles.link}>
-            <Link onClick={() => setNavExpanded(false)} to="/">O mně</Link>
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.activeLink : "")}
+              onClick={() => setNavExpanded(false)}
+              to="/"
+            >
+              O mně
+            </NavLink>
           </li>
           <li className={styles.link}>
-            <Link onClick={() => setNavExpanded(false)} to="/portfolio">Portfolio</Link>
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.activeLink : "")}
+              onClick={() => setNavExpanded(false)}
+              to="/portfolio"
+            >
+              Portfolio
+            </NavLink>
           </li>
           <li className={styles.link}>
-            <Link onClick={() => setNavExpanded(false)} to="/cenik">Ceník</Link>
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.activeLink : "")}
+              onClick={() => setNavExpanded(false)}
+              to="/cenik"
+            >
+              Ceník
+            </NavLink>
           </li>
           <li className={styles.link}>
-            <a onClick={() => setNavExpanded(false)} href="#footer">Kontakt</a>
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.activeLink : "")}
+              onClick={() => setNavExpanded(false)}
+              to="/kontakt"
+            >
+              Kontakt
+            </NavLink>
           </li>
         </ul>
       </div>

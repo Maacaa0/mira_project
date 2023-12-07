@@ -5,13 +5,14 @@
 
 .heading {
     margin-top: 2rem;
-    font-size: 1.2rem;
+    font-size: var(--fs-h3);
 }
 
 .galleries {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 25%));
   grid-gap: 1rem;
+  /* justify-content: center; */
   margin-top: 3rem;
 }
 

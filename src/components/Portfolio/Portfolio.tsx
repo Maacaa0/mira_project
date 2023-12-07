@@ -5,7 +5,7 @@ import galleryItems from "./GalleryPaths";
 const Portfolio = () => {
   const galleries = galleryItems.map((gallery) => {
     return (
-      <Link className={styles.gallery} to={`/${gallery.url}`} key={gallery.url}>
+      <Link className={styles.gallery} to={`/portfolio/${gallery.id}`} key={gallery.id}>
         <div className={styles.galleryText}>{gallery.text}</div>
         <img
           className={styles.galleryImg}

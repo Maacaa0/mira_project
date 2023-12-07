@@ -13,6 +13,15 @@
   backdrop-filter: blur(1.5px); */
 }
 
+a {
+  text-decoration: none;
+  color: var(--text-clr);
+}
+
+a:visited {
+  color: var(--text-clr);
+}
+
 .logo {
   color: var(--text-clr);
   font-size: 1.5rem;
@@ -42,7 +51,12 @@
 }
 
 .link:hover {
-  text-decoration: underline;
+  opacity: .7;
+}
+
+.activeLink {
+  padding: 5px;
+  border: 1px solid var(--text-clr);
 }
 
 /* .galleryBtn {
