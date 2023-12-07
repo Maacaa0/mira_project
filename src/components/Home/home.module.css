@@ -58,7 +58,7 @@
 }
 
 .bgSpace {
-  background: url(./images/7.jpg) center no-repeat;
+  background: url("/images/7.jpg") center no-repeat;
   background-attachment: fixed;
   height: 30vh;
   width: 100%;
