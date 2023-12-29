@@ -1,9 +1,9 @@
 export const reviews = [
-    {
-        name: "Marie",
-        text: "Mirek je suprový fotograf,skvělé nápady,aby byli fotky naprosto dokonalé. veliká spokojenost s přístupem i rychlostí dodání fotek.Fotky jsou luxusní.Určitě to nebylo mé poslední focení a už teď se moc tesim na další ❤️🫶.Doporučuji na 100% focení si užijete naplno a s výsledkem budete spokojeni.",
-        woman: true
-    },
+    // {
+    //     name: "Marie",
+    //     text: "Mirek je suprový fotograf,skvělé nápady,aby byli fotky naprosto dokonalé. veliká spokojenost s přístupem i rychlostí dodání fotek.Fotky jsou luxusní.Určitě to nebylo mé poslední focení a už teď se moc tesim na další ❤️🫶.Doporučuji na 100% focení si užijete naplno a s výsledkem budete spokojeni.",
+    //     woman: true
+    // },
     {
         name: "Michal",
         text: "Perfektní spolupráce, úžasná kvalita finálního výsledku. Moc jsem si focení užil a velmi doporučuji 👍😊",

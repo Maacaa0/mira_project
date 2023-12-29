@@ -1,5 +1,8 @@
 import { facebookIcon, instagramIcon } from "../../assets/icons";
 import styles from "./home.module.css";
+
+import Reviews from "./Reviews";
+
 const Home = () => {
   return (
     <>
@@ -17,10 +20,10 @@ const Home = () => {
           </p>
         </article>
         <div className={styles.socials}>
-          <a className={styles.icon} href="#">
+          <a className={styles.icon} href="https://www.facebook.com/photoartmk">
             {facebookIcon}
           </a>
-          <a className={styles.icon} href="#">
+          <a className={styles.icon} href="https://www.instagram.com/miroslav_kravec">
             {instagramIcon}
           </a>
         </div>
@@ -37,12 +40,12 @@ const Home = () => {
 
           </div>
           <p className={styles.detailText}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quos modi error est incidunt itaque, eaque dolore pariatur consectetur obcaecati laboriosam omnis dolores libero nihil cumque optio ut nulla molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. In laudantium minus iusto omnis, voluptatum recusandae consequuntur error debitis facilis, asperiores, architecto qui quam autem quod tenetur ipsam doloremque aperiam voluptatibus!<br /><br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quos modi error est incidunt itaque, eaque dolore pariatur consectetur obcaecati laboriosam omnis dolores libero nihil cumque optio ut nulla molestiae? architecto qui quam autem quod tenetur ipsam doloremque aperiam voluptatibus!<br /><br />
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Et fugit cumque eos blanditiis, omnis recusandae eveniet, dolor placeat iure dolores pariatur, corrupti debitis libero vitae quia aperiam architecto autem possimus.
           </p>
         </article>
       </section>
-      <section className="reviews"></section>
+      <Reviews />
     </>
   );
 };

@@ -54,13 +54,12 @@
 
 .info {
   width: 100%;
-  /* min-height: 100vh; */
 }
 
 .bgSpace {
   background: url("/images/7.jpg") center no-repeat;
   background-attachment: fixed;
-  height: 30vh;
+  height: 40vh;
   width: 100%;
 }
 
@@ -85,6 +84,7 @@
 }
 
 .detailText {
+  color: var(--text-clr);
   max-width: 45rem;
   margin-left: 5rem;
 }
@@ -127,6 +127,7 @@
 
 .detailText {
   margin: 0;
+  text-align: center;
 }
 }
 

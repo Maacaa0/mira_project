@@ -32,7 +32,13 @@ const Gallery = () => {
   console.log(currentGallery);
   return (
     <section className={styles.gallery}>
-      <Link className={styles.backBtn} to="/portfolio">{chevronLeft} Zpět</Link>
+      <Link className={styles.backBtn} 
+            relative="path" 
+            to="..">
+
+        {chevronLeft} Zpět
+        
+      </Link>
       <h3 className={styles.heading}>Galerie {currentGallery?.text}</h3>
       <div>
         {currentGallery?.gallery.map((imgPath, index) => (
