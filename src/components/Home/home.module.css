@@ -2,7 +2,9 @@
   display: flex;
   min-height: 100dvh;
 
-  background: url("/images/portrait.jpeg") -20vw no-repeat;
+  background: url("/images/main_img_cut_reduced.jpg") -10vw no-repeat;
+  background-position: left;
+  background-size: cover;
   position: relative;
   width: 100%;
 
@@ -24,6 +26,13 @@
 }
 
 .name {
+}
+
+.subName {
+  opacity: 0.7;
+  font-size: 1.2rem;
+  margin: 0;
+  font-style: italic;
   margin-bottom: 1rem;
 }
 
@@ -49,7 +58,6 @@
   -o-transition: 200ms ease-in-out;
   cursor: pointer;
   fill: #cd3e3e;
-  cursor: pointer;
 }
 
 .info {
@@ -57,10 +65,32 @@
 }
 
 .bgSpace {
+  position: relative;
   background: url("/images/7.jpg") center no-repeat;
+  background-size: cover;
   background-attachment: fixed;
-  height: 40vh;
+  height: 20rem;
   width: 100%;
+}
+
+.bgSpace:before,
+.bgSpace:after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  content: "";
+  z-index: 2;
+}
+
+.bgSpace:before {
+  top: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), var(--bg-clr));
+}
+
+.bgSpace:after {
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--bg-clr));
 }
 
 .detail {
@@ -93,6 +123,11 @@
   .socials {
     display: none;
   }
+  .home {
+    min-height: 250dvh;
+    background-image: url("/images/main_img_cut_reduced.jpg");
+    /* background-position: 100%; */
+  }
 }
 
 @media (max-width: 900px) {
@@ -109,7 +144,7 @@
 
   .detail {
     flex-direction: column;
-    padding: 2rem var(--page-padding);
+    padding: 2rem var(--page-padding) 0;
   }
 
   .detailImgWrapper {
@@ -118,24 +153,20 @@
   }
 
   .detailImg {
-    border-radius: 10%;
-    -webkit-border-radius: 10%;
-    -moz-border-radius: 10%;
-    -ms-border-radius: 10%;
-    -o-border-radius: 10%;
-}
+    border-radius: 6px;
+  }
 
-.detailText {
-  margin: 0;
-  text-align: center;
+  .detailText {
+    margin: 0;
+    text-align: center;
+  }
 }
-}
-
-/* 192.168.1.7:5173 */
 
 @media (max-width: 600px) {
   .home {
-    background-position: center;
+    background: url("/images/main_mobile.jpg") center no-repeat;
+    background-size: cover;
+    /* background-position: 100%; */
   }
 
   .about {
@@ -145,6 +176,10 @@
 
   .name {
     font-size: 1.1rem;
+  }
+
+  .subName {
+    font-size: 1rem;
   }
 
   .text {
@@ -161,5 +196,12 @@
     display: flex;
     gap: 1rem;
     fill: white;
+  }
+
+  .bgSpace {
+    /* height: 30vh; */
+    background: url("/images/7_small.jpg") center no-repeat;
+    background-size: cover;
+    display: none;
   }
 }

@@ -26,7 +26,7 @@ const Reviews = () => {
             {reviewsItems}
           </div>
         </div>
-        <a className={styles.link} target="_blank" href="https://www.facebook.com/photoartmk/reviews">Pro více hodnocení se podívejte na můj Facebook.</a>
+        <a className={styles.link} target="_blank" href="https://www.facebook.com/photoartmk/reviews">Klikněte pro více recenzí.</a>
     </section>
   )
 }

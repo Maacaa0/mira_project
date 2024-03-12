@@ -15,7 +15,8 @@
   scroll-behavior: smooth;
 
   --bg-clr: #242424;
-  --text-clr: #ddd0c8;
+  --highlight-clr: #cd3e3e;
+  --text-clr: #bfbfbf;
   --page-padding: 4vw;
 
   --fs-h3: 1.5rem;

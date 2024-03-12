@@ -13,7 +13,7 @@ type GalleryType = {
 };
 
 const Gallery = () => {
-  const params = useParams<{ id?: string }>();
+  const params = useParams();
 
   const [currentGallery, setCurrentGallery] = useState<GalleryType | null>(
     null
@@ -32,12 +32,8 @@ const Gallery = () => {
   console.log(currentGallery);
   return (
     <section className={styles.gallery}>
-      <Link className={styles.backBtn} 
-            relative="path" 
-            to="..">
-
+      <Link className={styles.backBtn} relative="path" to="..">
         {chevronLeft} Zpět
-        
       </Link>
       <h3 className={styles.heading}>Galerie {currentGallery?.text}</h3>
       <div>
