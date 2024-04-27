@@ -1,46 +1,52 @@
-import { useState, useEffect } from "react";
 import styles from "./gallery.module.css";
 import { useParams, Link } from "react-router-dom";
-import galleryItems from "./GalleryPaths";
+import { galleries, GalleryType } from "./GalleryPaths";
 import { chevronLeft } from "../../assets/icons";
-
-type GalleryType = {
-  id: number;
-  preview: string[];
-  url: string;
-  text: string;
-  gallery: string[];
-};
+import { useState } from "react";
+import FsLightbox from "fslightbox-react";
 
 const Gallery = () => {
-  const params = useParams();
+  const { id } = useParams();
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1,
+  });
+  const currentGallery: GalleryType = galleries.find(
+    (gallery) => gallery.id === parseInt(id!)
+  )!;
 
-  const [currentGallery, setCurrentGallery] = useState<GalleryType | null>(
-    null
-  );
-
-  useEffect(() => {
-    // Check if params.id is a valid index before updating the state
-    const index = +params.id! - 1 || 0;
-    if (!isNaN(index) && index >= 0 && index <= galleryItems.length) {
-      setCurrentGallery(galleryItems[index]);
-    } else {
-      setCurrentGallery(null); // Set an empty array if the index is invalid
-    }
-  }, [params.id]);
-
-  console.log(currentGallery);
+  function openLightboxOnSlide(number: number) {
+    setLightboxController({
+      toggler: !lightboxController.toggler,
+      slide: number,
+    });
+  }
+ 
   return (
     <section className={styles.gallery}>
       <Link className={styles.backBtn} relative="path" to="..">
         {chevronLeft} Zpět
       </Link>
-      <h3 className={styles.heading}>Galerie {currentGallery?.text}</h3>
-      <div>
-        {currentGallery?.gallery.map((imgPath, index) => (
-          <img className={styles.galleryImg} key={index} src={imgPath} alt="" />
+      <h1 className={styles.heading}>Galerie {currentGallery?.text}</h1>
+      {/* <p>{currentGallery.id}</p> */}
+      <div className={styles.imgContainer}>
+        {currentGallery?.gallery.map((item, index) => (
+          <img
+            onClick={() => openLightboxOnSlide(index + 1)}
+            className={styles.galleryImg}
+            key={index}
+            src={item}
+            loading="lazy"
+            alt=""
+          />
         ))}
       </div>
+      <FsLightbox
+        toggler={lightboxController.toggler}
+        slide={lightboxController.slide}
+        sources={currentGallery.gallery}
+        onClose={() => document.exitFullscreen()}
+      />
     </section>
   );
 };

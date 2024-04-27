@@ -10,7 +10,7 @@ const Reviews = () => {
                       className={`${styles.box} ${review.woman ? styles.red : styles.blue}`}
                       key={index}
                     >
-                      <h2 className={styles.name}>-- {review.name}</h2>
+                      <h2 className={styles.name}>{review.name}</h2>
                       <p className={styles.text}>{review.text}</p>
                     </div>
                   );

@@ -1,12 +1,12 @@
- export type GalleryItem = {
+export type GalleryType = {
   id: number;
   preview: string[];
   url: string;
   text: string;
   gallery: string[];
-}
+};
 
-const galleryItems = [
+export const galleries = [
   {
     id: 1,
     preview: ["./images/1.jpg"],
@@ -47,6 +47,18 @@ const galleryItems = [
       "../images/4.jpg",
       "../images/5.jpg",
       "../images/6.jpg",
+      "../images/1.jpg",
+      "../images/2.jpg",
+      "../images/3.jpg",
+      "../images/4.jpg",
+      "../images/5.jpg",
+      "../images/6.jpg",
+      "../images/1.jpg",
+      "../images/2.jpg",
+      "../images/3.jpg",
+      "../images/4.jpg",
+      "../images/5.jpg",
+      "../images/6.jpg",
     ],
   },
   {
@@ -77,6 +89,61 @@ const galleryItems = [
       "../images/6.jpg",
     ],
   },
+  {
+    id: 6,
+    preview: ["../images/photos/4.jpg"],
+    url: "portrety",
+    text: "Portréty",
+    gallery: [
+      "../images/photos/1.jpg",
+      "../images/photos/2.jpg",
+      "../images/photos/3.jpg",
+      "../images/photos/4.jpg",
+      "../images/photos/5.jpg",
+      "../images/photos/6.jpg",
+      "../images/photos/7.jpg",
+      "../images/photos/8.jpg",
+      "../images/photos/9.jpg",
+      "../images/photos/10.jpg",
+      "../images/photos/11.jpg",
+      "../images/photos/12.jpg",
+      "../images/photos/13.jpg",
+      "../images/photos/14.jpg",
+      "../images/photos/15.jpg",
+      "../images/photos/16.jpg",
+      "../images/photos/17.jpg",
+      "../images/photos/18.jpg",
+      "../images/photos/19.jpg",
+      "../images/photos/20.jpg",
+      "../images/photos/21.jpg",
+      "../images/photos/22.jpg",
+      "../images/photos/23.jpg",
+      "../images/photos/24.jpg",
+      "../images/photos/25.jpg",
+      "../images/photos/26.jpg",
+      "../images/photos/27.jpg",
+      "../images/photos/28.jpg",
+      "../images/photos/29.jpg",
+      "../images/photos/30.jpg",
+      "../images/photos/31.jpg",
+      "../images/photos/32.jpg",
+      "../images/photos/33.jpg",
+      "../images/photos/34.jpg",
+      "../images/photos/35.jpg",
+      "../images/photos/36.jpg",
+      "../images/photos/37.jpg",
+      "../images/photos/38.jpg",
+      "../images/photos/39.jpg",
+      "../images/photos/40.jpg",
+      "../images/photos/41.jpg",
+      "../images/photos/42.jpg",
+      "../images/photos/43.jpg",
+      "../images/photos/44.jpg",
+      "../images/photos/45.jpg",
+      "../images/photos/46.jpg",
+      "../images/photos/47.jpg",
+      "../images/photos/48.jpg",
+      "../images/photos/49.jpg",
+    ],
+  },
 ];
-
-export default galleryItems
