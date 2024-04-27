@@ -1,9 +1,9 @@
 import styles from "./portfolio.module.css";
 import { Link } from "react-router-dom";
-import galleryItems from "./GalleryPaths";
+import { galleries } from "./GalleryPaths";
 
 const Portfolio = () => {
-  const galleries = galleryItems.map((gallery) => {
+  const galleriesElement = galleries.map((gallery) => {
     return (
       <Link
         className={styles.gallery}
@@ -28,7 +28,7 @@ const Portfolio = () => {
         <h3>Podívejte se na mou tvorbu.</h3>
         <p>Vyberte si galerii.</p>
       </article>
-      <div className={styles.galleries}>{galleries}</div>
+      <div className={styles.galleries}>{galleriesElement}</div>
     </section>
   );
 };
