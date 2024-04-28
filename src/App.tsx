@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
-import Main from "./components/Home/Home";
-import PriceList from "./components/Pricelist/Pricelist";
-import Portfolio from "./components/Portfolio/Portfolio";
-import Gallery from "./components/Portfolio/Gallery";
-import Contact from "./components/Contact/Contact";
+import Main from "./pages/Home/Home";
+import PriceList from "./pages/Pricelist/Pricelist";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import Gallery from "./components/Gallery/Gallery";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import { facebookIcon, instagramIcon } from "../../assets/icons";
 import styles from "./home.module.css";
 
-import Reviews from "./Reviews";
+import Reviews from "../../components/Reviews/Reviews";
 
 const Home = () => {
   return (

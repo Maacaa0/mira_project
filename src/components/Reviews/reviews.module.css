@@ -95,14 +95,6 @@
   font-weight: 300;
 }
 
-/* .box.red.box::before {
-  color: #d9189ea3;
-}
-
-.box.blue.box::before {
-  color: #5959ebd1;
-} */
-
 .red .name {
   color: #cba0ba;
 }

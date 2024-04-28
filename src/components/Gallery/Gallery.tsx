@@ -21,7 +21,7 @@ const Gallery = () => {
       slide: number,
     });
   }
- 
+
   return (
     <section className={styles.gallery}>
       <Link className={styles.backBtn} relative="path" to="..">
@@ -45,7 +45,8 @@ const Gallery = () => {
         toggler={lightboxController.toggler}
         slide={lightboxController.slide}
         sources={currentGallery.gallery}
-        onClose={() => document.exitFullscreen()}
+        
+        onClose={() => document.fullscreenElement && document.exitFullscreen()}
       />
     </section>
   );
