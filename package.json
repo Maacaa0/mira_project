@@ -11,13 +11,18 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
+    "@hookform/resolvers": "^3.3.4",
     "fslightbox-react": "^1.7.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3"
+    "react-hook-form": "^7.51.3",
+    "react-router-dom": "^6.22.3",
+    "zod": "^3.23.4"
   },
   "devDependencies": {
     "@types/fslightbox-react": "^1.7.7",
+    "@types/node": "^20.12.7",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
     "@typescript-eslint/eslint-plugin": "^6.21.0",

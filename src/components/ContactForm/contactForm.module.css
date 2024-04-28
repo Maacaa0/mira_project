@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 30rem;
+}
+
+.btn {
+    padding: .51rem;
+    border: 3px solid var(--text-clr);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 200ms ease;
+    letter-spacing: 2px;
+    max-height: 30px;
+}
+
+.btn:not(:disabled):active {
+    transform: scale(.99);
+}
+
+.btn:disabled {
+    opacity: .3;
+}
+
+.btn:not(:disabled):hover {
+    background: var(--text-clr);
+    color: var(--bg-clr);
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-clr)!important;
+    padding: .5rem;
+    max-width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--text-clr);
+}
+
+.input:focus-visible {
+    border: 2px solid var(--text-clr);
+    outline: none;
+}
+
+.submitMessage {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    white-space: pre-line;
+}
+
+.errorMessage  {
+    font-size: .875rem;
+    color:  var(--error-clr);
+    letter-spacing: 1px;
+}

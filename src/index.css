@@ -17,6 +17,7 @@
   --bg-clr: #242424;
   --highlight-clr: #cd3e3e;
   --text-clr: #bfbfbf;
+  --error-clr: #cd3e3e;
   --page-padding: 4vw;
 
   --fs-h3: 1.5rem;
@@ -43,3 +44,4 @@ button {
     --fs-h3: 1.3rem;
   }
 }
+
