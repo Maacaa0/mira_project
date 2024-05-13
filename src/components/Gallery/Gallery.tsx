@@ -21,14 +21,13 @@ const Gallery = () => {
       slide: number,
     });
   }
- 
+
   return (
     <section className={styles.gallery}>
       <Link className={styles.backBtn} relative="path" to="..">
         {chevronLeft} Zpět
       </Link>
       <h1 className={styles.heading}>Galerie {currentGallery?.text}</h1>
-      {/* <p>{currentGallery.id}</p> */}
       <div className={styles.imgContainer}>
         {currentGallery?.gallery.map((item, index) => (
           <img
@@ -45,7 +44,8 @@ const Gallery = () => {
         toggler={lightboxController.toggler}
         slide={lightboxController.slide}
         sources={currentGallery.gallery}
-        onClose={() => document.exitFullscreen()}
+
+        onClose={() => document.fullscreenElement && document.exitFullscreen()}
       />
     </section>
   );

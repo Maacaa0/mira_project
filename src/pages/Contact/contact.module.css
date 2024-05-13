@@ -1,0 +1,8 @@
+.contact {
+    min-height: 100vh;
+    padding: 5rem var(--page-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

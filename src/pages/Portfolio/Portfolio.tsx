@@ -1,6 +1,6 @@
 import styles from "./portfolio.module.css";
 import { Link } from "react-router-dom";
-import { galleries } from "./GalleryPaths";
+import { galleries } from "../../components/Gallery/GalleryPaths";
 
 const Portfolio = () => {
   const galleriesElement = galleries.map((gallery) => {
