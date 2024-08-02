@@ -47,6 +47,7 @@ const Home = () => {
         </article>
       </section>
       <Reviews />
+      <a className={styles.link} target="_blank" href="https://www.facebook.com/photoartmk/reviews">Klikněte pro více recenzí.</a>
     </>
   );
 };

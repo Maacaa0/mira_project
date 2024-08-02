@@ -9,6 +9,7 @@ import Home from "./pages/Home/Home.tsx";
 import Portfolio from "./pages/Portfolio/Portfolio.tsx";
 import Pricelist from "./pages/Pricelist/Pricelist.tsx";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
