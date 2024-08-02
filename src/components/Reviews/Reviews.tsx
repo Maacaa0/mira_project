@@ -3,21 +3,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./reviews.module.css";
 import Slider from "react-slick";
-const getSlidesToShow = () => {
-  const width = window.innerWidth;
-
-  if (width < 480) {
-    return 1; // Mobile devices
-  } else if (width >= 480 && width < 768) {
-    return 2; // Small tablets
-  } else if (width >= 768 && width < 1024) {
-    return 3; // Tablets
-  } else if (width >= 1024 && width < 1280) {
-    return 4; // Small desktops
-  } else {
-    return 5; // Large desktops
-  }
-};
 const Reviews = () => {
   const reviewsItems = reviews.map((review, index) => {
     return (
