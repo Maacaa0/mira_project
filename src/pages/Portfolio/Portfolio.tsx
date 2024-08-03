@@ -16,13 +16,13 @@ export const Portfolio = () => {
       if (isExplicit) {
         setIsDialogOpen(true);
       } else {
-        navigate(`/portfolio/${gallery.id}`);
+        navigate(`/portfolio/${gallery.url}`);
       }
     };
 
     const handleConfirm = () => {
       setIsDialogOpen(false);
-      navigate(`/portfolio/${gallery.id}`);
+      navigate(`/portfolio/${gallery.url}`);
     };
 
     const handleCancel = () => {

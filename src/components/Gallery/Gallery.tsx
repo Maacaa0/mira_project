@@ -13,7 +13,7 @@ export const Gallery = () => {
     slide: 1,
   });
   const currentGallery: GalleryType = galleries.find(
-    (gallery) => gallery.id === parseInt(id!)
+    (gallery) => gallery.url === id
   )!;
 
   function openLightboxOnSlide(number: number) {
@@ -28,7 +28,7 @@ export const Gallery = () => {
       <Link className={styles.backBtn} relative="path" to="..">
         {chevronLeft} Zpět
       </Link>
-      <h1 className={styles.heading}>Galerie {currentGallery?.text}</h1>
+      <h1 className={styles.heading}>{currentGallery?.text}</h1>
       <div className={styles.imgContainer}>
         {currentGallery?.gallery.map((item, index) => (
           <img
