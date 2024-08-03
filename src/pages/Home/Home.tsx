@@ -1,9 +1,8 @@
 import { facebookIcon, instagramIcon } from "../../assets/icons";
+import { Reviews } from "../../components";
 import styles from "./home.module.css";
 
-import Reviews from "../../components/Reviews/Reviews";
-
-const Home = () => {
+export const Home = () => {
   return (
     <>
       <main className={styles.home}>
@@ -24,32 +23,40 @@ const Home = () => {
           <a className={styles.icon} href="https://www.facebook.com/photoartmk">
             {facebookIcon}
           </a>
-          <a className={styles.icon} href="https://www.instagram.com/miroslav_kravec">
+          <a
+            className={styles.icon}
+            href="https://www.instagram.com/miroslav_kravec"
+          >
             {instagramIcon}
           </a>
         </div>
       </main>
       <section className={styles.info}>
         <div className={styles.bgSpace}></div>
+        <Reviews />
         <article className={styles.detail}>
           <div className={styles.detailImgWrapper}>
-          <img
-            className={styles.detailImg}
-            src="./images/portrait1.jpg"
-            alt="Fotka autora"
-          />
-
+            <img
+              className={styles.detailImg}
+              src="./images/portrait1.jpg"
+              alt="Fotka autora"
+            />
           </div>
           <p className={styles.detailText}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quos modi error est incidunt itaque, eaque dolore pariatur consectetur obcaecati laboriosam omnis dolores libero nihil cumque optio ut nulla molestiae? architecto qui quam autem quod tenetur ipsam doloremque aperiam voluptatibus!<br /><br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et fugit cumque eos blanditiis, omnis recusandae eveniet, dolor placeat iure dolores pariatur, corrupti debitis libero vitae quia aperiam architecto autem possimus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quos
+            modi error est incidunt itaque, eaque dolore pariatur consectetur
+            obcaecati laboriosam omnis dolores libero nihil cumque optio ut
+            nulla molestiae? architecto qui quam autem quod tenetur ipsam
+            doloremque aperiam voluptatibus!
+            <br />
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et fugit
+            cumque eos blanditiis, omnis recusandae eveniet, dolor placeat iure
+            dolores pariatur, corrupti debitis libero vitae quia aperiam
+            architecto autem possimus.
           </p>
         </article>
       </section>
-      <Reviews />
-      <a className={styles.link} target="_blank" href="https://www.facebook.com/photoartmk/reviews">Klikněte pro více recenzí.</a>
     </>
   );
 };
-
-export default Home;

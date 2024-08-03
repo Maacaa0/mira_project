@@ -1,11 +1,12 @@
 import styles from "./gallery.module.css";
 import { useParams, Link } from "react-router-dom";
-import { galleries, GalleryType } from "./GalleryPaths";
+// import { galleries, GalleryType } from "./galleryPaths";
 import { chevronLeft } from "../../assets/icons";
 import { useState } from "react";
 import FsLightbox from "fslightbox-react";
+import { galleries, GalleryType } from "./galleryPaths";
 
-const Gallery = () => {
+export const Gallery = () => {
   const { id } = useParams();
   const [lightboxController, setLightboxController] = useState({
     toggler: false,
@@ -37,6 +38,9 @@ const Gallery = () => {
             src={item}
             loading="lazy"
             alt=""
+            onError={(e) => {
+              e.currentTarget.src = "../images/default-fallback-image.png";
+            }}
           />
         ))}
       </div>
@@ -44,11 +48,8 @@ const Gallery = () => {
         toggler={lightboxController.toggler}
         slide={lightboxController.slide}
         sources={currentGallery.gallery}
-
         onClose={() => document.fullscreenElement && document.exitFullscreen()}
       />
     </section>
   );
 };
-
-export default Gallery;

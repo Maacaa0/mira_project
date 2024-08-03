@@ -3,12 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./components/Layout.tsx";
-import Gallery from "./components/Gallery/Gallery.tsx";
-import Contact from "./pages/Contact/Contact.tsx";
-import Home from "./pages/Home/Home.tsx";
-import Portfolio from "./pages/Portfolio/Portfolio.tsx";
-import Pricelist from "./pages/Pricelist/Pricelist.tsx";
-
+import { Gallery } from "./components/index.ts";
+import { Home, Pricelist, Portfolio, Contact } from "./pages/index";
 
 const router = createBrowserRouter([
   {

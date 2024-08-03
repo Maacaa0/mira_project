@@ -1,6 +1,7 @@
 .slider {
   cursor: pointer;
   height: max-content;
+  margin-top: 3rem;
   margin-bottom: 4rem;
 }
 .box {

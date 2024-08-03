@@ -3,16 +3,22 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./reviews.module.css";
 import Slider from "react-slick";
-const Reviews = () => {
+export const Reviews = () => {
   const reviewsItems = reviews.map((review, index) => {
     return (
-      <div
-        className={`${styles.box} ${review.woman ? styles.red : styles.blue}`}
-        key={index}
+      <a
+        key={index + review.name}
+        target="_blank"
+        draggable="false"
+        href="https://www.facebook.com/photoartmk/reviews"
       >
-        <h2 className={styles.name}>{review.name}</h2>
-        <p className={styles.text}>{review.text}</p>
-      </div>
+        <div
+          className={`${styles.box} ${review.woman ? styles.red : styles.blue}`}
+        >
+          <h2 className={styles.name}>{review.name}</h2>
+          <p className={styles.text}>{review.text}</p>
+        </div>
+      </a>
     );
   });
 
@@ -22,18 +28,17 @@ const Reviews = () => {
       infinite
       dots
       autoplay
-      autoplaySpeed={2000}
-      speed={1000}
-      adaptiveHeight
+      autoplaySpeed={5000}
+      speed={2000}
       slidesToShow={5}
-      slidesToScroll={5}
+      slidesToScroll={3}
       className={styles.slider}
       responsive={[
         {
           breakpoint: 1280, // Large desktops and below
           settings: {
             slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToScroll: 3,
           },
         },
         {
@@ -63,5 +68,3 @@ const Reviews = () => {
     </Slider>
   );
 };
-
-export default Reviews;

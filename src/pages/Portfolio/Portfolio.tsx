@@ -1,24 +1,62 @@
 import styles from "./portfolio.module.css";
-import { Link } from "react-router-dom";
-import { galleries } from "../../components/Gallery/GalleryPaths";
+import { useNavigate } from "react-router-dom";
+import { galleries } from "../../components/Gallery/galleryPaths";
+import { useState } from "react";
+import { ConfirmDialog } from "../../components";
+import React from "react";
 
-const Portfolio = () => {
+export const Portfolio = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const navigate = useNavigate();
   const galleriesElement = galleries.map((gallery) => {
+    const isExplicit = gallery.explicit;
+    console.log(gallery);
+
+    const handleNavigate = () => {
+      if (isExplicit) {
+        setIsDialogOpen(true);
+      } else {
+        navigate(`/portfolio/${gallery.id}`);
+      }
+    };
+
+    const handleConfirm = () => {
+      setIsDialogOpen(false);
+      navigate(`/portfolio/${gallery.id}`);
+    };
+
+    const handleCancel = () => {
+      setIsDialogOpen(false);
+    };
+
     return (
-      <Link
-        className={styles.gallery}
-        to={`/portfolio/${gallery.id}`}
-        key={gallery.id}
-      >
-        <div className={styles.galleryText}>{gallery.text}</div>
-        <img
-          className={styles.galleryImg}
-          src={
-            gallery.preview[Math.floor(Math.random() * gallery.preview.length)]
-          }
-          alt="Snímek z galerie"
-        />
-      </Link>
+      <React.Fragment key={gallery.url + gallery.id}>
+        <button
+          className={styles.gallery}
+          onClick={() => handleNavigate()}
+          key={gallery.id}
+        >
+          <div className={styles.galleryText}>{gallery.text} </div>
+          <img
+            className={styles.galleryImg}
+            src={
+              gallery.preview[
+                Math.floor(Math.random() * gallery.preview.length)
+              ]
+            }
+            alt="Snímek z galerie"
+          />
+          {isExplicit && <div className={styles.galleryTextExplicit}>18 +</div>}
+        </button>
+        {isExplicit && (
+          <ConfirmDialog
+            message="Je vám více než 18 let?"
+            onConfirm={handleConfirm}
+            onCancel={handleCancel}
+            isOpen={isDialogOpen}
+          />
+        )}
+      </React.Fragment>
     );
   });
 
@@ -32,5 +70,3 @@ const Portfolio = () => {
     </section>
   );
 };
-
-export default Portfolio;

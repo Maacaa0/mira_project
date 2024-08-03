@@ -7,7 +7,7 @@ import { hamburgerClose, hamburgerOpen } from "../../assets/icons";
 //   setgalleryExpanded: () => void
 // }
 
-export default function Navbar() {
+export const Navbar = () => {
   // const [galleryExpanded, setgalleryExpanded] = useState(false);
   const [navExpanded, setNavExpanded] = useState(false);
 
@@ -76,32 +76,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
-
-{
-  /* <button
-              className={styles.galleryBtn}
-              onClick={() => setgalleryExpanded(!galleryExpanded)}
-            >
-              Galerie {galleryExpanded ? chevronUp : chevronDown}
-            </button>
-            {galleryExpanded && (
-              <>
-                <ul className={styles.galleryOptions}>
-                  <li className={styles.galleryOption}>
-                    <Link to={"/"}>Text odkazu 1</Link>
-                  </li>
-                  <li className={styles.galleryOption}>
-                    <Link to={"/"}>Text odkazu 2</Link>
-                  </li>
-                  <li className={styles.galleryOption}>
-                    <Link to={"/"}>Text odkazu 3</Link>
-                  </li>
-                </ul>
-                <div
-                  onClick={() => setgalleryExpanded(false)}
-                  className={styles.overlay}
-                ></div>
-              </>
-            )} */
-}
+};
