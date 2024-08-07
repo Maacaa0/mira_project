@@ -27,6 +27,7 @@ export const Reviews = () => {
       arrows={false}
       infinite
       dots
+      // dotsClass={styles.dots}
       autoplay
       autoplaySpeed={5000}
       speed={2000}

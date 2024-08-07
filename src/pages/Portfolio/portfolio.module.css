@@ -1,12 +1,4 @@
-.main {
-  min-height: 100vh;
-  padding: 5rem var(--page-padding);
-}
-
-.heading {
-  margin-top: 2rem;
-  font-size: var(--fs-h3);
-}
+@import "/src/index.css";
 
 .galleries {
   display: flex;
@@ -71,6 +63,8 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
+  animation: skeleton-loading 1s linear infinite alternate;
+
 }
 
 @media (max-width: 1200px) {

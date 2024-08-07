@@ -13,20 +13,16 @@
   backdrop-filter: blur(1.5px); */
 }
 
-a {
-  text-decoration: none;
-  color: var(--text-clr);
-}
-
-a:visited {
-  color: var(--text-clr);
-}
-
 .logo {
   color: var(--text-clr);
   font-size: 1.5rem;
   border-bottom: 1px solid var(--text-clr);
   border-top: 1px solid var(--text-clr);
+}
+
+.logoImg {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .hamburger {
@@ -117,7 +113,7 @@ a:visited {
   display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .hamburger {
     display: block;
   }
@@ -149,9 +145,4 @@ a:visited {
   .links {
     flex-direction: column;
   }
-
-  /* .galleryOptions {
-    top: 18rem;
-    background: rgb(0 0 0);
-  } */
 }

@@ -67,6 +67,15 @@ export const Navbar = () => {
             <NavLink
               className={({ isActive }) => (isActive ? styles.activeLink : "")}
               onClick={() => setNavExpanded(false)}
+              to="/reference"
+            >
+              Reference
+            </NavLink>
+          </li>
+          <li className={styles.link}>
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.activeLink : "")}
+              onClick={() => setNavExpanded(false)}
               to="/kontakt"
             >
               Kontakt

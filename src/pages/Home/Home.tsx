@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { facebookIcon, instagramIcon } from "../../assets/icons";
 import { Reviews } from "../../components";
 import styles from "./home.module.css";
@@ -9,22 +10,25 @@ export const Home = () => {
         <div className={styles.fill}></div>
         <article className={styles.about}>
           <h1 className={styles.name}>Miroslav Kravec</h1>
-          <h2 className={styles.subName}>Fotograf</h2>
+          {/* <h2 className={styles.subName}>Fotograf</h2> */}
           <p className={styles.text}>
-            Jsem rodilý Turnovák a stále tu žiji. K fotografii mě přivedl můj
-            táta. Jako kluk jsem mu asistoval při vyvolávání fotografií z
-            kinofilmu v provizorní temné komoře na půdě našeho domu. Práce s
-            fotkami a pořizování záběrů vůbec mě zaujaly natolik, že jsem se v
-            dospělosti stal kameramanem soukromé televize. Později jsem pracoval
-            i jako fotograf a fotoeditor v tištěných novinách.
+            {/* Vítejte na mé fotografické stránce! <br /> */}
+            <br /> Jsem Váš <strong>profesionální fotograf</strong>, který se
+            specializuje na širokou škálu fotografií. Mým cílem je zachytit
+            krásu a jedinečnost okamžiku prostřednictvím mého objektivu.
           </p>
         </article>
         <div className={styles.socials}>
-          <a className={styles.icon} href="https://www.facebook.com/photoartmk">
+          <a
+            className={styles.icon}
+            target="_blank"
+            href="https://www.facebook.com/photoartmk"
+          >
             {facebookIcon}
           </a>
           <a
             className={styles.icon}
+            target="_blank"
             href="https://www.instagram.com/miroslav_kravec"
           >
             {instagramIcon}
@@ -32,8 +36,7 @@ export const Home = () => {
         </div>
       </main>
       <section className={styles.info}>
-        <div className={styles.bgSpace}></div>
-        <Reviews />
+        {/* <div className={styles.bgSpace}></div> */}
         <article className={styles.detail}>
           <div className={styles.detailImgWrapper}>
             <img
@@ -43,19 +46,77 @@ export const Home = () => {
             />
           </div>
           <p className={styles.detailText}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quos
-            modi error est incidunt itaque, eaque dolore pariatur consectetur
-            obcaecati laboriosam omnis dolores libero nihil cumque optio ut
-            nulla molestiae? architecto qui quam autem quod tenetur ipsam
-            doloremque aperiam voluptatibus!
+            Co ode mně můžete očekávat? Fotím různé žánry.
             <br />
+            <br /> Zajímá mě každý jedinečný <strong>portrét</strong> a rád
+            zachytím vaši osobnost v každém snímku. <br />
             <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et fugit
-            cumque eos blanditiis, omnis recusandae eveniet, dolor placeat iure
-            dolores pariatur, corrupti debitis libero vitae quia aperiam
-            architecto autem possimus.
+            Dokážu zachytit energii a atmosféru vaší <strong>
+              události
+            </strong>{" "}
+            tak, aby každý snímek vyprávěl příběh.
           </p>
         </article>
+        <article className={styles.detailReversed}>
+          <div className={styles.detailImgWrapper}>
+            <img
+              className={styles.detailImgReversed}
+              src="./images/7.jpg"
+              alt="Fotka autora"
+            />
+          </div>
+          <p className={styles.detailText}>
+            <strong>Glamour a Akty.</strong>
+            <br /> Umím si pohrát se světlem a stínem, abych vytvořil elegantní
+            a vkusné snímky pro váš osobní nebo profesionální portfólio. <br />
+            <br /> Zamiloval jsem se do krásy{" "}
+            <strong>městských uliček i přírody</strong>. Moje fotografie
+            přinášejí moji osobní perspektivu na prostředí kolem nás.
+          </p>
+        </article>
+        <article className={styles.detail}>
+          <div className={styles.detailImgWrapper}>
+            <img
+              className={styles.detailImg}
+              src="./images/crops.jpg"
+              alt="Fotka autora"
+            />
+          </div>
+          <p className={styles.detailText}>
+            <strong>Jsem schopen fotografovat po celé České republice.</strong>{" "}
+            Díky velkým bateriovým zábleskům a flexibilitě mohu vytvořit
+            "ateliér" prakticky kdekoliv.
+            <br />
+            <br />
+            Nabízím také služby{" "}
+            <strong>fotografování firemních portrétů</strong> a dokumentace
+            firem.{" "}
+            <strong>
+              Pomůžu vám prezentovat vaši firmu profesionálním způsobem.
+            </strong>
+          </p>
+        </article>
+
+        <p className={styles.centeredText}>
+          <strong>
+            Jsem otevřený spolupráci na projektech pro dobročinné organizace a
+            neziskové sektory.
+          </strong>{" "}
+          <br />
+          <br />
+          <br /> Pokud hledáte <strong>zkušeného fotografa</strong>, který
+          dokáže zachytit krásu každého okamžiku,{" "}
+          <Link className={styles.contactLink} relative="path" to="/kontakt">
+            <b>neváhejte mě kontaktovat.</b>
+          </Link>{" "}
+          Společně můžeme vytvořit nezapomenutelné obrázky, které budete moci
+          opakovaně prožívat.
+          <br />
+          <br />
+          <br /> Níže si můžete přečíst některé z referencí mých klientek a
+          klientů.
+        </p>
+        <Reviews />
       </section>
     </>
   );

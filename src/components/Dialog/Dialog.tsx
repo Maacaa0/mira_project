@@ -1,3 +1,4 @@
+import { hamburgerClose } from "../../assets/icons";
 import styles from "./dialog.module.css";
 interface ConfirmDialogProps {
   message: string;
@@ -17,6 +18,9 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
     <>
       <div className={styles.overlay} onClick={onCancel}></div>
       <dialog className={styles.dialog} open>
+        <button onClick={onCancel} className={styles.closeBtn}>
+          {hamburgerClose}
+        </button>
         <form method="dialog">
           <p>{message}</p>
           <menu className={styles.menu}>

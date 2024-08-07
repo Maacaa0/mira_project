@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,600;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100,400;0,600;1,300&display=swap");
 :root {
   font-family: "Roboto Condensed", Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;
@@ -6,7 +6,7 @@
   letter-spacing: 0.3px;
 
   color: rgba(255, 255, 255, 0.8);
-  background-color: #242424;
+  background-color: #0f0f0f;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,6 +28,15 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text-clr);
+}
+
+a:visited {
+  color: var(--text-clr);
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -38,8 +47,26 @@ button {
   all: unset;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 @media (max-width: 600px) {
   :root {
     --fs-h3: 1.3rem;
+  }
+}
+
+.heading {
+  margin-top: 2rem;
+  font-size: var(--fs-h3);
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
   }
 }

@@ -1,0 +1,29 @@
+.articleHeading {
+  margin-top: 2rem;
+  /* font-size: var(--fs-h4); */
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  text-decoration: underline;
+  color: var(--text-clr);
+}
+
+.text {
+  max-width: 40%;
+}
+
+.textDetail {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.img {
+  max-width: 50%;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+}

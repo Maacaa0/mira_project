@@ -4,7 +4,7 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./components/Layout.tsx";
 import { Gallery } from "./components/index.ts";
-import { Home, Pricelist, Portfolio, Contact } from "./pages/index";
+import { Home, Pricelist, Portfolio, Contact, Reference } from "./pages/index";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/portfolio/:id",
         Component: Gallery,
+      },
+      {
+        path: "/reference",
+        Component: Reference,
       },
       {
         path: "/kontakt",

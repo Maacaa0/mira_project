@@ -1,0 +1,9 @@
+.pageWrapper {
+  min-height: 100vh;
+  padding: 5rem var(--page-padding);
+}
+
+.heading {
+  margin-top: 2rem;
+  font-size: var(--fs-h3);
+}

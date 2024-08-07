@@ -1,9 +1,9 @@
 import styles from "./portfolio.module.css";
+import commonStyles from "../../common.module.css";
 import { useNavigate } from "react-router-dom";
-import { galleries } from "../../components/Gallery/galleryPaths";
-import { useState } from "react";
+import { galleries } from "../../components/gallery/galleryPaths";
+import { useState, Fragment } from "react";
 import { ConfirmDialog } from "../../components";
-import React from "react";
 
 export const Portfolio = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -30,7 +30,7 @@ export const Portfolio = () => {
     };
 
     return (
-      <React.Fragment key={gallery.url + gallery.id}>
+      <Fragment key={gallery.url + gallery.id}>
         <button
           className={styles.gallery}
           onClick={() => handleNavigate()}
@@ -50,19 +50,19 @@ export const Portfolio = () => {
         </button>
         {isExplicit && (
           <ConfirmDialog
-            message="Je vám více než 18 let?"
+            message="Potvrďte prosím, že už vám bylo 18 let."
             onConfirm={handleConfirm}
             onCancel={handleCancel}
             isOpen={isDialogOpen}
           />
         )}
-      </React.Fragment>
+      </Fragment>
     );
   });
 
   return (
-    <section className={styles.main}>
-      <article className={styles.heading}>
+    <section className={commonStyles.pageWrapper}>
+      <article className={commonStyles.heading}>
         <h3>Podívejte se na mou tvorbu.</h3>
         <p>Vyberte si galerii.</p>
       </article>
