@@ -4,3 +4,16 @@
   align-items: center;
   justify-content: center;
 }
+
+.wrapper {
+  display: flex;
+}
+
+.imgWrapper {
+  /* margin: auto; */
+  max-width: 20rem;
+}
+
+.img {
+  width: 100%;
+}

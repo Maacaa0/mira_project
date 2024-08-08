@@ -16,18 +16,23 @@ export const Footer = () => {
         </div>
 
         <div className={styles.socials}>
-          <a className={styles.icon} href="https://www.facebook.com/photoartmk">
+          <a
+            className={styles.icon}
+            target="_blank"
+            href="https://www.facebook.com/photoartmk"
+          >
             {facebookIcon}
           </a>
           <a
             className={styles.icon}
+            target="_blank"
             href="https://www.instagram.com/miroslav_kravec"
           >
             {instagramIcon}
           </a>
           <a className={styles.logo} href="/">
-        MK
-      </a>
+            MK
+          </a>
         </div>
       </footer>
       <p className={styles.copyright}>
@@ -36,4 +41,3 @@ export const Footer = () => {
     </>
   );
 };
-

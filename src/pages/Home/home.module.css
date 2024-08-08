@@ -19,7 +19,7 @@
 .about {
   width: 50%;
   height: fit-content;
-  margin: 5rem 2rem;
+  margin: 8rem 2rem;
   padding: 2rem;
   background: rgb(0 0 0 / 50%);
   color: var(--text-clr);
@@ -67,6 +67,7 @@
 }
 
 .info {
+  margin-top: 10rem;
   width: 100%;
 }
 
@@ -271,5 +272,11 @@
     margin: 0;
     font-style: italic;
     margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .detailText {
+    font-size: 1.4rem;
   }
 }
