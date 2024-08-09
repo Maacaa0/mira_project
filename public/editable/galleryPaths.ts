@@ -4,6 +4,7 @@ export type GalleryType = {
   url: string;
   text: string;
   explicit?: boolean;
+  description?: string;
   gallery: string[];
 };
 
@@ -13,6 +14,7 @@ export const galleries = [
     preview: ["../images/portret/Portret_BIG_00054.jpg"],
     url: "portret",
     text: "Portrét",
+    description: "text který popisuje tuto galerii",
     gallery: [
       "../images/portret/Portret_BIG_00001.jpg",
       "../images/portret/Portret_BIG_00002.jpg",
@@ -75,6 +77,7 @@ export const galleries = [
     preview: ["../images/rodinne/Rodinne_a_skupinove_BIG_00008.jpg"],
     url: "rodinne-skupinove",
     text: "Rodinné a skupinové",
+    description: "text který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galerii text který popisuje tuto galerii text který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galeriitext který popisuje tuto galerii ",
     gallery: [
       "../images/rodinne/Rodinne_a_skupinove_BIG_00001.jpg",
       "../images/rodinne/Rodinne_a_skupinove_BIG_00002.jpg",
@@ -96,6 +99,7 @@ export const galleries = [
     preview: ["./images/glamour/Glamour a AKT_BIG_00011.jpg"],
     url: "glamour-akt",
     text: "Glamour a AKT",
+    description: "text který popisuje tuto galerii",
     explicit: true,
     gallery: [
       "../images/glamour/Glamour a AKT_BIG_00001.jpg",
@@ -162,6 +166,7 @@ export const galleries = [
     preview: ["../images/letadla/Letadla_BIG_00011.jpg"],
     url: "aviatika",
     text: "Aviatika",
+    description: "text který popisuje tuto galerii",
     gallery: [
       "../images/letadla/Letadla_BIG_00001.jpg",
       "../images/letadla/Letadla_BIG_00002.jpg",
@@ -187,6 +192,7 @@ export const galleries = [
     preview: ["../images/architektura/Architektura_BIG_00015.jpg"],
     url: "architektura",
     text: "Architektura",
+    description: "text který popisuje tuto galerii",
     gallery: [
       "../images/architektura/Architektura_BIG_00001.jpg",
       "../images/architektura/Architektura_BIG_00002.jpg",
@@ -215,6 +221,7 @@ export const galleries = [
     preview: ["../images/reference/Reference_BIG_00007.jpg"],
     url: "reference",
     text: "Reference",
+    description: "text který popisuje tuto galerii",
     gallery: [
       "../images/reference/Reference_BIG_00001.jpg",
       "../images/reference/Reference_BIG_00002.jpg",

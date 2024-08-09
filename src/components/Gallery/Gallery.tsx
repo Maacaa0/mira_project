@@ -4,8 +4,9 @@ import { useParams, Link } from "react-router-dom";
 import { chevronLeft } from "../../assets/icons";
 import { useEffect, useState } from "react";
 import FsLightbox from "fslightbox-react";
-import { galleries, GalleryType } from "./galleryPaths";
 import { shuffleArr } from "../../utils";
+import { Image } from "../Image";
+import { galleries, GalleryType } from ".";
 
 export const Gallery = () => {
   const { id } = useParams();
@@ -35,18 +36,18 @@ export const Gallery = () => {
         {chevronLeft} Zpět
       </Link>
       <section className={commonStyles.pageWrapper}>
-        <h1 className={styles.heading}>{currentGallery?.text}</h1>
+        <h3 className={styles.heading}>{currentGallery?.text}</h3>
+        <p className={styles.description}>{currentGallery.description}</p>
         <div className={styles.imgContainer}>
           {shuffledGallery.map((item, index) => (
-            <img
+            <Image
               onClick={() =>
                 openLightboxOnSlide(shuffledGallery.indexOf(item) + 1)
               }
               className={styles.galleryImg}
-              key={index}
               src={item}
-              loading="lazy"
-              alt=""
+              key={item + index}
+              alt={item}
               onError={(e) => {
                 e.currentTarget.src = "../images/default-fallback-image.png";
               }}
@@ -60,13 +61,6 @@ export const Gallery = () => {
           onClose={() =>
             document.fullscreenElement && document.exitFullscreen()
           }
-          captions={[
-            <>
-              <h2>The first image's title.</h2>
-              <h3>The first image's description.</h3>
-            </>,
-            "The second caption"
-          ]}
         />
       </section>
     </>

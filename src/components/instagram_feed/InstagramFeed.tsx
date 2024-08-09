@@ -1,55 +1,70 @@
-import { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
+import "../../index.css";
+interface InstagramEmbedProps {
+  url: string;
+}
+interface InstgrmEmbeds {
+  process: () => void;
+}
 
-const InstagramPost = ({ url }: { url: string }) => {
-  useEffect(() => {
-    // Load Instagram's embed script
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.instagram.com/embed.js";
-    document.body.appendChild(script);
-
-    return () => {
-      // Clean up script on unmount
-      document.body.removeChild(script);
+declare global {
+  interface Window {
+    instgrm?: {
+      Embeds: InstgrmEmbeds;
     };
-  }, []);
+  }
+}
+
+const InstagramEmbed: React.FC<InstagramEmbedProps> = ({ url }) => {
+  const containerRef = useRef<HTMLQuoteElement>(null);
+
+  useEffect(() => {
+    // Function to load Instagram script
+    const loadInstagramScript = () => {
+      if (
+        !document.querySelector(
+          'script[src="https://www.instagram.com/embed.js"]'
+        )
+      ) {
+        const script = document.createElement("script");
+        script.src = "https://www.instagram.com/embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+        script.onload = () => {
+          if (window.instgrm) {
+            window.instgrm.Embeds.process();
+          }
+        };
+      } else {
+        if (window.instgrm) {
+          window.instgrm.Embeds.process();
+        }
+      }
+    };
+
+    loadInstagramScript();
+  }, [url]);
 
   return (
     <blockquote
-      className="instagram-media"
+      className="instagram-media custom-instagram"
       data-instgrm-permalink={url}
-      data-instgrm-version="12"
       style={{
         background: "#FFF",
-        border: 0,
+        border: "0",
         borderRadius: "3px",
-        boxShadow: "0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)",
-        maxWidth: "1200px",
+        boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+        margin: "1px",
+        maxWidth: "1000px",
         minWidth: "326px",
-        padding: 0,
-        width: "90%",
-        display: "flex",
-        justifyContent: "center",
+        padding: "0",
+        width: "80%",
       }}
+      ref={containerRef}
     >
-      <div style={{ padding: "16px" }}>
-        <a
-          href={url}
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            lineHeight: 0,
-            padding: "0 0",
-            textAlign: "center",
-            textDecoration: "none",
-            width: "100%",
-          }}
-        >
-          Zobrazit profil na instagramu
-        </a>
-      </div>
+      {/* Instagram content will be injected by the script */}
     </blockquote>
   );
 };
 
-export default InstagramPost;
+export default InstagramEmbed;

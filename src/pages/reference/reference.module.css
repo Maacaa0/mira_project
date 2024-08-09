@@ -1,9 +1,10 @@
 .articleHeading {
   margin-top: 2rem;
-  /* font-size: var(--fs-h4); */
+  font-size: 1.8rem;
 }
 
 .article {
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
 }
@@ -14,7 +15,7 @@
 }
 
 .text {
-  max-width: 40%;
+  max-width: 50%;
 }
 
 .textDetail {
@@ -23,7 +24,18 @@
 }
 
 .img {
-  max-width: 50%;
+  width: 100%;
+  max-width: 40rem;
   border-radius: 20px;
   margin-top: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .text {
+    max-width: 100%;
+  }
+
+  .img {
+    max-width: 100%;
+  }
 }

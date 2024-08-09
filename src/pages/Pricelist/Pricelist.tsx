@@ -13,7 +13,7 @@ export const Pricelist = () => {
             rámec balíčku: 150,- Kč/fotografie
           </p>
           <div className={styles.boxBottom}>
-            <p className={styles.price}>1500 Kč</p>
+            <p className={styles.price}>1 500 Kč</p>
           </div>
         </article>
 
@@ -27,7 +27,7 @@ export const Pricelist = () => {
             kvalitní výsledky
           </p>
           <div className={styles.boxBottom}>
-            <p className={styles.price}>2000 Kč</p>
+            <p className={styles.price}>2 000 Kč</p>
           </div>
         </article>
 

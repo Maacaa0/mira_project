@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { facebookIcon, instagramIcon } from "../../assets/icons";
-import { Reviews } from "../../components";
+import { Image, Reviews } from "../../components";
 import styles from "./home.module.css";
 import InstagramFeed from "../../components/instagram_feed/InstagramFeed";
 
@@ -40,7 +40,7 @@ export const Home = () => {
         {/* <div className={styles.bgSpace}></div> */}
         <article className={styles.detail}>
           <div className={styles.detailImgWrapper}>
-            <img
+            <Image
               className={styles.detailImg}
               src="./images/portrait1.jpg"
               alt="Fotka autora"
@@ -49,8 +49,8 @@ export const Home = () => {
           <p className={styles.detailText}>
             Co ode mně můžete očekávat? Fotím různé žánry.
             <br />
-             Zajímá mě každý jedinečný <strong>portrét</strong> a rád
-            zachytím vaši osobnost v každém snímku. 
+            Zajímá mě každý jedinečný <strong>portrét</strong> a rád zachytím
+            vaši osobnost v každém snímku.
             <br />
             Dokážu zachytit energii a atmosféru vaší <strong>
               události
@@ -60,7 +60,7 @@ export const Home = () => {
         </article>
         <article className={styles.detailReversed}>
           <div className={styles.detailImgWrapper}>
-            <img
+            <Image
               className={styles.detailImgReversed}
               src="./images/7.jpg"
               alt="Fotka autora"
@@ -69,7 +69,7 @@ export const Home = () => {
           <p className={styles.detailText}>
             <strong>Glamour a Akty.</strong>
             <br /> Umím si pohrát se světlem a stínem, abych vytvořil elegantní
-            a vkusné snímky pro váš osobní nebo profesionální portfólio. 
+            a vkusné snímky pro váš osobní nebo profesionální portfólio.
             <br /> Zamiloval jsem se do krásy{" "}
             <strong>městských uliček i přírody</strong>. Moje fotografie
             přinášejí moji osobní perspektivu na prostředí kolem nás.
@@ -77,7 +77,7 @@ export const Home = () => {
         </article>
         <article className={styles.detail}>
           <div className={styles.detailImgWrapper}>
-            <img
+            <Image
               className={styles.detailImg}
               src="./images/crops.jpg"
               alt="Fotka autora"
@@ -88,7 +88,6 @@ export const Home = () => {
             Díky velkým bateriovým zábleskům a flexibilitě mohu vytvořit
             "ateliér" prakticky kdekoliv.
             <br />
-            {/* <br /> */}
             Nabízím také služby{" "}
             <strong>fotografování firemních portrétů</strong> a dokumentace
             firem.{" "}
@@ -118,7 +117,7 @@ export const Home = () => {
           klientů.
         </p>
         <Reviews />
-        <div style={{display: 'flex', justifyContent: 'center'}}>
+        <div style={{ display: "flex", justifyContent: "center" }}>
           <InstagramFeed url={"https://www.instagram.com/miroslav_kravec/"} />
         </div>
       </section>

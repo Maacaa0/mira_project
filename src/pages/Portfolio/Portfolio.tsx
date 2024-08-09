@@ -1,16 +1,15 @@
 import styles from "./portfolio.module.css";
 import commonStyles from "../../common.module.css";
 import { useNavigate } from "react-router-dom";
-import { galleries } from "../../components/gallery/galleryPaths";
+import { galleries } from "../../../public/editable/galleryPaths";
 import { useState, Fragment } from "react";
-import { ConfirmDialog } from "../../components";
+import { ConfirmDialog, Image } from "../../components";
 
 export const Portfolio = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
   const galleriesElement = galleries.map((gallery) => {
     const isExplicit = gallery.explicit;
-    console.log(gallery);
 
     const handleNavigate = () => {
       if (isExplicit) {
@@ -37,7 +36,7 @@ export const Portfolio = () => {
           key={gallery.id}
         >
           <div className={styles.galleryText}>{gallery.text} </div>
-          <img
+          <Image
             className={styles.galleryImg}
             src={
               gallery.preview[

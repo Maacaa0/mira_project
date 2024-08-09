@@ -1,3 +1,3 @@
 export * from "./Gallery";
 export * from "./gallery.module.css";
-export * from "./galleryPaths";
+export * from "../../../public/editable/galleryPaths";

@@ -4,3 +4,4 @@ export * from "./navbar";
 export * from "./dialog";
 export * from "./reviews";
 export * from "./instagram_feed";
+export * from "./Image";

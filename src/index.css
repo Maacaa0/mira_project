@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100,400;0,600;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;300;600&display=swap");
 :root {
   font-family: "Roboto Condensed", Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;
@@ -69,4 +69,17 @@ button {
   100% {
     background-color: hsl(200, 20%, 95%);
   }
+}
+
+.skeleton_loading {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+/* InstagramEmbed.css */
+.xjbqb8w {
+  background-color: red !important; /* Darker background color */
+}
+
+.instagram-media.custom-instagram .xjbqb8w {
+  background-color: #333 !important; /* Targeting specific Instagram classes */
 }

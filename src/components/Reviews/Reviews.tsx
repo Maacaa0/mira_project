@@ -1,4 +1,4 @@
-import { reviews } from "../../assets/reviews";
+import { reviews } from "../../../public/editable/reviews";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./reviews.module.css";
